@@ -1,0 +1,21 @@
+<mat-card class="d-flex flex-column back-color shadow" *ngIf="fiveDaysForecast">
+  <div class="d-flex justify-content-between bold-left-text font-color">
+    <div>{{fiveDaysForecast.cityName}}</div>
+    <div>
+      <button mat-icon-button  (click)="addToFavorites()">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mt-5 bold-center-text mb-5 font-color text-center" style="line-height: 1.5;">
+    {{ fiveDaysForecast.data?.Headline?.Text }}
+    
+  </div>
+  <div class="d-flex justify-content-center flex-wrap">
+    <one-day-forecast
+      *ngFor="let dailyForecasts of fiveDaysForecast.data.DailyForecasts"
+      [dailyForecasts]="dailyForecasts"
+      class=" m-2"
+    ></one-day-forecast>
+  </div>
+</mat-card>

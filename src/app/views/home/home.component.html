@@ -1,0 +1,19 @@
+<div class="flex-column" *ngIf="!isBusy; else lodaer">
+
+
+    <div class="  d-flex justify-content-center  mt-4 ">
+      <city-picker class="col-lg-5 col-md-6 col-10 m-2"></city-picker>
+    </div>
+  
+
+  <div class="d-flex justify-content-center   ">
+    <five-days-forecast class="col-xl-8 col-lg-8 col-md-10 col-10" ></five-days-forecast>
+  </div>
+
+</div>
+
+<ng-template #lodaer>
+  <div class="d-flex justify-content-center mt-5">
+    <mat-spinner [diameter]="50"></mat-spinner>
+  </div>
+</ng-template>

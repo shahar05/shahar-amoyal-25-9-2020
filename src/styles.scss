@@ -1,0 +1,50 @@
+@import './assets/styles/variables.scss';
+
+body {
+    background-color: var(--siteBackgroundColor);
+
+    
+}
+.back-color{
+    background: var(--headerColor);
+}
+
+.font-error{
+    color: var(--fontErrorColor);
+}
+.bold-left-text{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.bold-center-text{
+    font-size: 30px;
+    font-weight: 600;
+}
+.shadow {
+    box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.3) !important;
+  }
+
+.mr-10 {
+    margin-right: 10%;
+}
+
+.ml-10 {
+    margin-left: 10%;
+}
+
+.mat-form-field-wrapper{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.font-color{
+    color: $fontColor;
+}
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+    color: white ;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline  {
+    color: white ;
+  }

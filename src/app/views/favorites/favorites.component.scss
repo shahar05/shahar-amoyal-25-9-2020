@@ -1,0 +1,21 @@
+
+@import '../../../assets/styles/variables.scss';
+
+.favoriteFont{
+    color : var(--favoriteFont)
+}
+
+// .mat-mini-fab.mat-primary {
+//     color: white;
+//     background-color: $primaryMat;
+//   }
+  
+  ::ng-deep .mat-mini-fab.mat-primary:hover {
+    color: $primaryMat;
+    background-color: white;
+  }
+  
+  ::ng-deep  .mat-mini-fab.mat-warn:hover {
+    color: $redMat;
+    background-color: white;
+  }
