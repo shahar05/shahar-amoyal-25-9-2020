@@ -21,7 +21,9 @@ export class CityService {
 
     this.netService.getCitiesByName(searchText)
     .subscribe((entities: City[]) => {
-    
+    if(!entities){
+      return [];
+    }
       entities = entities.map(e=>{return {id:guid() , ...e}} )
       this.cityStore.set(entities);
 

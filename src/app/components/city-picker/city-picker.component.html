@@ -28,13 +28,12 @@
             {{ option.LocalizedName }}
           </mat-option>
         </mat-autocomplete>
+        <mat-error class="mt-20-px"> English letters only</mat-error>
+
       </mat-form-field>
     </div>
   </mat-card>
 
-  <div  class="min-size font-error"  >
-    <p  class="ml-2" *ngIf="this.form.controls['cityPicker'].invalid && this.form.controls['cityPicker'].touched" >  English letters only   </p>
-  </div>
 
 
 </div>

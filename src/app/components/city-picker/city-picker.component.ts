@@ -8,6 +8,7 @@ import { CityQuery } from '../../entities/state/city/city.query';
 import { City } from 'src/app/entities/state/city/city.model';
 import { FiveDaysForecast } from '../../entities/state/five-days-forecast/five-days-forecast.model';
 import { FiveDaysForecastService } from '../../entities/state/five-days-forecast/five-days-forecast.service';
+import { fieldInObjRegex } from 'src/app/validators/fieldInObject';
 
 @Component({
   selector: 'city-picker',
@@ -24,7 +25,7 @@ export class CityPickerComponent implements OnInit {
     
 
     this.form = new FormGroup({ });
-    this.form.addControl('cityPicker', new FormControl('',[Validators.pattern(/[a-zA-Z]/)  ]));
+    this.form.addControl('cityPicker', new FormControl('',[fieldInObjRegex('name' , /^[a-zA-Z ]+$/)  ]));
     this.form.controls['cityPicker'].valueChanges
       .pipe(
         debounceTime(300)
@@ -33,12 +34,15 @@ export class CityPickerComponent implements OnInit {
       });
   }
 
-  displayFn(city: City): string {
-    return city && city.LocalizedName ? city.LocalizedName : '';
+
+  displayFn(city): string {
+    return city && city.name ? city.name : '';
   }
 
-  //TODO: 
+  
   citySelected({ option: { value } }) {
+    this.form.controls['cityPicker'].setValue(value)
+
     this.fiveDaysForecastService.get(value.key, value.name);
   }
 }
