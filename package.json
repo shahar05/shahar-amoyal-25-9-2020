@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build --prod ",
+    "heroku-postbuild": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -25,7 +26,9 @@
     "@datorama/akita": "^5.2.4",
     "angular-cli-ghpages": "^0.6.2",
     "bootstrap": "^4.5.2",
+    "express": "^4.17.1",
     "ngx-toastr": "^13.0.0",
+    "path": "^0.12.7",
     "rxjs": "~6.5.4",
     "save-dev": "0.0.1-security",
     "tslib": "^1.10.0",
