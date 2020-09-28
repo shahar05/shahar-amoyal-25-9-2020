@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href /weather",
+    "build": "ng build --prod ",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@angular/animations": "~9.0.3",
     "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.0.3",
@@ -22,9 +23,11 @@
     "@angular/platform-browser-dynamic": "~9.0.3",
     "@angular/router": "~9.0.3",
     "@datorama/akita": "^5.2.4",
+    "angular-cli-ghpages": "^0.6.2",
     "bootstrap": "^4.5.2",
     "ngx-toastr": "^13.0.0",
     "rxjs": "~6.5.4",
+    "save-dev": "0.0.1-security",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
