@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment';
 
 
 
-const URL = "http://dataservice.accuweather.com"
+const URL = "https://dataservice.accuweather.com"
 
 const DEVELOP_URL = "../../assets/db/"
 const DURING_DEVELOPMENT = false;
